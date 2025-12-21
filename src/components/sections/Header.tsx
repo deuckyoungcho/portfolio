@@ -35,14 +35,14 @@ const Header = () => {
           >
             <Phone className="w-4 h-4 mr-1.5" /> {contact.phone}
           </a>
-          <a
+          {/* <a
             href={`https://github.com/${contact.github}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center hover:text-blue-600"
           >
             <Github className="w-4 h-4 mr-1.5" /> {contact.github}
-          </a>
+          </a> */}
         </div>
       </div>
     </header>

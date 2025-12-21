@@ -17,7 +17,7 @@ export const resumeData = {
   contact: {
     email: "cps3upp@gmail.com",
     phone: "+821062715105",
-    github: "cps3upp", // Assuming github username from email
+    // github: "cps3upp",
   },
   summary: `9년차 프론트엔드 엔지니어로서 React, TypeScript 기반의 웹 서비스 개발을 주도해 왔습니다.
 대규모 슈퍼앱 플랫폼의 코어 SDK 및 공통 모듈 개발을 리딩했으며, 최근 스타트업에서는 Tailwind CSS, Remix를 활용하여 고성능 고객용/어드민 웹 애플리케이션 아키텍처를 성공적으로 구축했습니다.
