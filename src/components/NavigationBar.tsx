@@ -14,7 +14,7 @@ const NavigationBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative sticky top-0 bg-gray-50/80 dark:bg-gray-900/80 backdrop-blur-sm z-10 shadow-md mb-4">
+    <nav className="navigation-bar sticky top-0 bg-gray-50/80 dark:bg-gray-900/80 backdrop-blur-sm z-10 shadow-md mb-4">
       <div className="container mx-auto max-w-4xl px-4">
         <div className="flex justify-between items-center h-16">
           <div className="hidden md:flex items-center space-x-6">
@@ -33,7 +33,7 @@ const NavigationBar: React.FC = () => {
             <ThemeToggle />
           </div>
 
-          <div className="md:hidden flex flex-grow justify-end items-center">
+          <div className="md:hidden flex grow justify-end items-center">
             <ThemeToggle />
             <div className="ml-4">
               <AnimatedHamburgerIcon isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />

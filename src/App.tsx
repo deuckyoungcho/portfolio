@@ -1,11 +1,11 @@
+import NavigationBar from "./components/NavigationBar";
 import About from "./components/sections/About";
 import Awards from "./components/sections/Awards";
 import Education from "./components/sections/Education";
 import Experience from "./components/sections/Experience";
 import Header from "./components/sections/Header";
 import Skills from "./components/sections/Skills";
-import NavigationBar from "./components/NavigationBar";
-
+import BackToTopButton from "./components/ui/BackToTopButton";
 import { resumeData } from "./data/resumeData";
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
       <footer className="text-center py-4 text-sm text-gray-500 dark:text-gray-400">
         <p>© {new Date().getFullYear()} {resumeData.name}. All rights reserved.</p>
       </footer>
+      <BackToTopButton />
     </div>
   )
 }

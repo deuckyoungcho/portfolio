@@ -8,7 +8,7 @@ const Section: React.FC<{
   const id = title.toLowerCase().replace(/\s+/g, "-");
 
   return (
-    <section id={id} className="mb-12 scroll-mt-22">
+    <section id={id} className="mb-20 scroll-mt-22">
       <h2 className="flex items-center mb-4 text-3xl font-bold text-gray-800 dark:text-gray-200">
         <Icon className="w-8 h-8 mr-4 text-primary" />
         {title}
