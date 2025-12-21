@@ -13,7 +13,7 @@ const Skills = () => {
         <CardContent className="flex flex-wrap gap-3 justify-center">
           {_skills.map(({ label, icon }, index) => (
             <Badge key={index}>
-              <img src={icon} alt={label} className="w-[18px] h-[18px]" />
+              <img src={`${import.meta.env.BASE_URL}${icon}`} alt={label} className="w-[18px] h-[18px]" />
               {label}
             </Badge>
           ))}

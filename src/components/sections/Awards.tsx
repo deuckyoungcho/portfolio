@@ -8,9 +8,9 @@ const Awards = () => {
   return (
     <Section icon={Award} title="Awards">
       <Card>
-        <div className='flex px-8'>
+        <div className="flex px-8">
           <img
-            src="/screenshots/awards.png"
+            src={`${import.meta.env.BASE_URL}/screenshots/awards.png`}
             alt="우수사원상"
             className="w-[180px] h-auto rounded-lg"
           />

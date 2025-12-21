@@ -9,7 +9,7 @@ const Header = () => {
     <header className="flex flex-col md:flex-row-reverse items-center gap-8 mb-12">
       {profilePicture && (
         <img
-          src={profilePicture}
+          src={`${import.meta.env.BASE_URL}${profilePicture}`}
           alt={`${name}'s profile`}
           className="w-32 h-32 rounded-full object-cover shadow-lg shrink-0"
         />

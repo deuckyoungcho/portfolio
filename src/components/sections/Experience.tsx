@@ -63,7 +63,7 @@ const Experience = () => {
                     transition-all duration-300 ease-in-out cursor-pointer hover:border-gray-300 hover:bg-slate-100 hover:-translate-y-0.5"
                     >
                       <img
-                        src={proj.images?.[0]}
+                        src={`${import.meta.env.BASE_URL}${proj.images?.[0]}`}
                         className="w-[100px] h-[60px] mr-4"
                       />
                       <div className="flex flex-col grow pr-4">
@@ -96,7 +96,7 @@ const Experience = () => {
                                 className="flex items-center justify-center"
                               >
                                 <img
-                                  src={image}
+                                  src={`${import.meta.env.BASE_URL}${image}`}
                                   alt={`${proj.title} image ${i + 1}`}
                                   className="max-h-80 object-contain rounded-sm"
                                 />
@@ -134,7 +134,9 @@ const Experience = () => {
                         {proj.stack?.map((tech, index) => (
                           <Badge key={index}>
                             <img
-                              src={skills[tech]?.icon ?? ""}
+                              src={`${import.meta.env.BASE_URL}${
+                                skills[tech]?.icon ?? ""
+                              }`}
                               alt={skills[tech]?.label ?? ""}
                               className="w-[18px] h-[18px]"
                             />

@@ -21,7 +21,7 @@ const Education = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src={edu.icon}
+                    src={`${import.meta.env.BASE_URL}${edu.icon}`}
                     alt={edu.school}
                     className="w-16 h-auto mr-8"
                   />
