@@ -16,9 +16,9 @@ const Awards = () => {
           />
           {awards.map((award, index) => (
             <div key={index} className="flex flex-col p-6 justify-center">
-              <h3 className="font-bold">{award.title}</h3>
-              <p className="text-sm text-gray-500">{award.date}</p>
-              <p className="text-sm mt-1">{award.description}</p>
+              <h3 className="font-bold dark:text-gray-100">{award.title}</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">{award.date}</p>
+              <p className="text-sm mt-1 dark:text-gray-300">{award.description}</p>
             </div>
           ))}
         </div>

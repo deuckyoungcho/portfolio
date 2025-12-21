@@ -14,27 +14,27 @@ const Header = () => {
               import.meta.env.BASE_URL
             }${profilePicture})`,
           }}
-          className="w-38 h-38 rounded-full bg-size-[85%] bg-position-[14px_0px] shadow-lg shrink-0"
+          className="w-38 h-38 rounded-full bg-size-[85%] bg-position-[14px_0px] shadow-lg dark:shadow-gray-800 shrink-0"
         />
       )}
 
       <div className="flex flex-col items-center md:items-start gap-2 grow">
-        <h1 className="text-5xl font-extrabold tracking-tight text-gray-900">
+        <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">
           {name}
         </h1>
-        <p className="text-xl text-gray-600">
+        <p className="text-xl text-gray-600 dark:text-gray-400">
           {title} | {yearsOfExperience}
         </p>
-        <div className="flex justify-center md:justify-start items-center mt-2 space-x-4 text-gray-600">
+        <div className="flex justify-center md:justify-start items-center mt-2 space-x-4 text-gray-600 dark:text-gray-400">
           <a
             href={`mailto:${contact.email}`}
-            className="flex items-center hover:text-blue-600"
+            className="flex items-center hover:text-blue-600 dark:hover:text-blue-400"
           >
             <Mail className="w-4 h-4 mr-1.5" /> {contact.email}
           </a>
           <a
             href={`tel:${contact.phone}`}
-            className="flex items-center hover:text-blue-600"
+            className="flex items-center hover:text-blue-600 dark:hover:text-blue-400"
           >
             <Phone className="w-4 h-4 mr-1.5" /> {contact.phone}
           </a>

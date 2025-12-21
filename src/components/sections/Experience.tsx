@@ -8,7 +8,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { resumeData } from "@/data/resumeData";
-import { ArrowRight, Briefcase } from "lucide-react";
+import { Briefcase } from "lucide-react";
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import {
@@ -54,10 +54,10 @@ const Experience = () => {
                       className="w-[100px] h-auto mb-1"
                     />
                   ) : null}
-                  <h3 className="text-xl font-bold">{exp.company}</h3>
-                  <p className="text-sm text-gray-500">{exp.role}</p>
+                  <h3 className="text-xl font-bold dark:text-gray-100">{exp.company}</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{exp.role}</p>
                 </div>
-                <span className="text-sm text-gray-500">{exp.period}</span>
+                <span className="text-sm text-gray-500 dark:text-gray-400">{exp.period}</span>
               </div>
             </CardHeader>
             <CardContent className="space-y-2">
@@ -66,26 +66,23 @@ const Experience = () => {
                   <DialogTrigger asChild>
                     <div
                       className="group p-4 rounded-lg border border-transparent flex items-center justify-between
-                    transition-all duration-300 ease-in-out cursor-pointer hover:border-gray-300 hover:bg-slate-100 hover:-translate-y-0.5"
+                    transition-all duration-300 ease-in-out cursor-pointer hover:border-gray-300 hover:bg-slate-100 hover:-translate-y-0.5 dark:hover:bg-gray-800 dark:hover:border-gray-700"
                     >
                       <img
                         src={`${import.meta.env.BASE_URL}${proj.images?.[0]}`}
-                        className="w-[100px] h-[60px] mr-4"
+                        className="w-[100px] h-[60px] mr-4 shrink-0"
                       />
-                      <div className="flex flex-col grow pr-4">
-                        <h4 className="font-semibold text-md mr-2">
+                      <div className="flex flex-col grow pr-2">
+                        <h4 className="font-semibold text-md mr-2 dark:text-gray-200">
                           {proj.title}
                         </h4>
-                        <p className="mt-1 text-sm text-gray-600">
+                        <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
                           {proj.summary}
                         </p>
                       </div>
-                      <div className="shrink-0">
-                        <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </div>
                     </div>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-[625px] pt-10">
+                  <DialogContent className="sm:max-w-[625px] pt-10 dark:shadow-none">
                     {proj.images && proj.images.length > 0 && (
                       <div className="relative mb-4">
                         <Carousel
@@ -118,8 +115,8 @@ const Experience = () => {
                               key={i}
                               onClick={() => api?.scrollTo(i)}
                               className={cn(
-                                "mx-1 h-2 w-2 rounded-full bg-gray-400",
-                                i + 1 === current && "bg-gray-800"
+                                "mx-1 h-2 w-2 rounded-full bg-gray-400 dark:bg-gray-600",
+                                i + 1 === current && "bg-gray-800 dark:bg-gray-200"
                               )}
                             />
                           ))}
