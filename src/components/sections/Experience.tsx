@@ -48,6 +48,12 @@ const Experience = () => {
             <CardHeader>
               <div className="flex justify-between items-start">
                 <div>
+                  {exp.logo ? (
+                    <img
+                      src={`${import.meta.env.BASE_URL}${exp.logo}`}
+                      className="w-[100px] h-auto mb-1"
+                    />
+                  ) : null}
                   <h3 className="text-xl font-bold">{exp.company}</h3>
                   <p className="text-sm text-gray-500">{exp.role}</p>
                 </div>
