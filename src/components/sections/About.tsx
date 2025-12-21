@@ -5,17 +5,24 @@ import { Home } from "lucide-react";
 
 const About = () => {
   const { summary } = resumeData;
-  const paragraphs = summary.split("\n").filter((p) => p.trim() !== "");
 
   return (
     <Section icon={Home} title="About">
       <Card>
         <CardContent className="p-6 space-y-4">
-          {paragraphs.map((paragraph, index) => (
-            <p key={index} className="text-base leading-relaxed">
-              {paragraph}
+          <article className="flex flex-col gap-4 text-base leading-relaxed whitespace-pre-line text-gray-800">
+            <p className="text-lg">
+              <strong className="text-gray-900">“{summary.title}”</strong>
             </p>
-          ))}
+
+            {summary.paragraphs.map((text, index) => (
+              <p
+                key={index}
+                className="text-gray-700"
+                dangerouslySetInnerHTML={{ __html: text }}
+              />
+            ))}
+          </article>
         </CardContent>
       </Card>
     </Section>
