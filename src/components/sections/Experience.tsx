@@ -73,7 +73,9 @@ const Experience = () => {
                         className="w-[100px] h-[60px] mr-4"
                       />
                       <div className="flex flex-col grow pr-4">
-                        <h4 className="font-semibold text-md">{proj.title}</h4>
+                        <h4 className="font-semibold text-md mr-2">
+                          {proj.title}
+                        </h4>
                         <p className="mt-1 text-sm text-gray-600">
                           {proj.summary}
                         </p>

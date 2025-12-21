@@ -1,17 +1,20 @@
-import { Github, Mail, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { resumeData } from "@/data/resumeData";
 
 const Header = () => {
   const { name, title, contact, profilePicture, yearsOfExperience } =
     resumeData;
-    
+
   return (
     <header className="flex flex-col md:flex-row-reverse items-center gap-8 mb-12">
       {profilePicture && (
-        <img
-          src={`${import.meta.env.BASE_URL}${profilePicture}`}
-          alt={`${name}'s profile`}
-          className="w-32 h-32 rounded-full object-cover shadow-lg shrink-0"
+        <div
+          style={{
+            backgroundImage: `url(${
+              import.meta.env.BASE_URL
+            }${profilePicture})`,
+          }}
+          className="w-38 h-38 rounded-full bg-size-[85%] bg-position-[14px_0px] shadow-lg shrink-0"
         />
       )}
 
