@@ -51,7 +51,7 @@ const Experience = () => {
                   {exp.logo ? (
                     <img
                       src={`${import.meta.env.BASE_URL}${exp.logo}`}
-                      className="w-[100px] h-auto mb-1"
+                      className="w-12 h-auto mb-1 sm:w-[100px]"
                     />
                   ) : null}
                   <h3 className="text-xl font-bold dark:text-gray-100">
@@ -76,7 +76,7 @@ const Experience = () => {
                     >
                       <img
                         src={`${import.meta.env.BASE_URL}${proj.images?.[0]}`}
-                        className="w-[100px] h-[60px] mr-4 shrink-0"
+                        className="w-[80px] h-[48px] mr-4 shrink-0 sm:w-[100px] sm:h-[60px]"
                       />
                       <div className="flex flex-col grow pr-2">
                         <h4 className="font-semibold text-md mr-2 dark:text-gray-200">
@@ -109,7 +109,7 @@ const Experience = () => {
                                 <img
                                   src={`${import.meta.env.BASE_URL}${image}`}
                                   alt={`${proj.title} image ${i + 1}`}
-                                  className="max-h-80 object-contain rounded-sm"
+                                  className="max-h-48 sm:max-h-80 object-contain rounded-sm"
                                 />
                               </CarouselItem>
                             ))}

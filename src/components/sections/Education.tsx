@@ -23,7 +23,7 @@ const Education = () => {
                   <img
                     src={`${import.meta.env.BASE_URL}${edu.icon}`}
                     alt={edu.school}
-                    className="w-16 h-auto mr-8"
+                    className="w-12 h-auto mr-6 sm:w-16"
                   />
                   <div className="flex flex-col grow pr-4">
                     <h3 className="text-md font-bold dark:text-gray-100">{edu.school}</h3>

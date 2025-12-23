@@ -12,7 +12,7 @@ const Awards = () => {
           <img
             src={`${import.meta.env.BASE_URL}/screenshots/awards.png`}
             alt="우수사원상"
-            className="w-[180px] h-auto rounded-lg"
+            className="w-28 sm:w-40 h-auto rounded-lg"
           />
           {awards.map((award, index) => (
             <div key={index} className="flex flex-col p-6 justify-center">
