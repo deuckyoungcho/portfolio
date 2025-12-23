@@ -1,7 +1,7 @@
 import Section from "@/components/Section";
 import { Card, CardContent } from "@/components/ui/card";
 import { resumeData } from "@/data/resumeData";
-import { ArrowRight, ChevronRight, GraduationCap } from "lucide-react";
+import { ChevronRight, GraduationCap } from "lucide-react";
 import { Fragment } from "react/jsx-runtime";
 
 const Education = () => {
