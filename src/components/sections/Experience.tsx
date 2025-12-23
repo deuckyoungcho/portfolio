@@ -8,7 +8,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { resumeData } from "@/data/resumeData";
-import { Briefcase } from "lucide-react";
+import { Briefcase, ChevronRight } from "lucide-react";
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import {
@@ -70,10 +70,20 @@ const Experience = () => {
               {exp.projects.map((proj, pIndex) => (
                 <Dialog key={pIndex} hash={proj.id}>
                   <DialogTrigger asChild>
-                    <div
-                      className="group p-4 rounded-lg border border-transparent flex items-center justify-between
-                    transition-all duration-300 ease-in-out cursor-pointer hover:border-gray-300 hover:bg-slate-100 hover:-translate-y-0.5 dark:hover:bg-gray-800 dark:hover:border-gray-700"
-                    >
+                      <div
+                        role="button"
+                        tabIndex={0}
+                        aria-label={`Open ${proj.title} details`}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" || e.key === " ") {
+                            (e.currentTarget as HTMLDivElement).click();
+                          }
+                        }}
+                        className="group p-4 rounded-lg border border-transparent flex items-center justify-between
+                      transition-all duration-150 ease-in-out cursor-pointer hover:border-gray-300 hover:bg-slate-100 hover:-translate-y-0.5 dark:hover:bg-gray-800 dark:hover:border-gray-700
+                      focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 dark:focus-visible:ring-indigo-400 select-none active:translate-y-0.5 active:scale-95 active:opacity-95"
+                        style={{ WebkitTapHighlightColor: "transparent", touchAction: "manipulation" }}
+                      >
                       <img
                         src={`${import.meta.env.BASE_URL}${proj.images?.[0]}`}
                         className="w-[80px] h-[48px] mr-4 shrink-0 sm:w-[100px] sm:h-[60px]"
@@ -86,6 +96,7 @@ const Experience = () => {
                           {proj.summary}
                         </p>
                       </div>
+                      <ChevronRight className="shrink-0 ml-4 w-4.5 h-4.5 text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300" />
                     </div>
                   </DialogTrigger>
                   <DialogContent className="flex flex-col sm:max-w-[625px] pt-10 dark:shadow-none">

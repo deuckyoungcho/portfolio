@@ -1,7 +1,7 @@
 import Section from "@/components/Section";
 import { Card, CardContent } from "@/components/ui/card";
 import { resumeData } from "@/data/resumeData";
-import { ArrowRight, GraduationCap } from "lucide-react";
+import { ArrowRight, ChevronRight, GraduationCap } from "lucide-react";
 
 const Education = () => {
   const { education } = resumeData;
@@ -26,13 +26,17 @@ const Education = () => {
                     className="w-12 h-auto mr-6 sm:w-16"
                   />
                   <div className="flex flex-col grow pr-4">
-                    <h3 className="text-md font-bold dark:text-gray-100">{edu.school}</h3>
-                    <p className="mt-1 text-sm dark:text-gray-300">{edu.major}</p>
-                    <p className="text-sm text-gray-500 mt-1 dark:text-gray-400">{edu.period}</p>
+                    <h3 className="text-md font-bold dark:text-gray-100">
+                      {edu.school}
+                    </h3>
+                    <p className="mt-1 text-sm dark:text-gray-300">
+                      {edu.major}
+                    </p>
+                    <p className="text-sm text-gray-500 mt-1 dark:text-gray-400">
+                      {edu.period}
+                    </p>
                   </div>
-                  <div className="shrink-0">
-                    <ArrowRight className="w-5 h-5 text-gray-300 dark:text-gray-600 group-hover:text-gray-500 dark:group-hover:text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
+                  <ChevronRight className="shrink-0 ml-4 w-4.5 h-4.5 text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300" />
                 </a>
                 {index < education.length - 1 && (
                   <hr className="my-4 border-gray-200 dark:border-gray-700" />
