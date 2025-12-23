@@ -11,7 +11,7 @@ const ThemeToggle: React.FC = () => {
 
   const download = () => {
     const link = document.createElement("a");
-    link.href = "/조득용_경력기술서.pdf";
+    link.href = `${import.meta.env.BASE_URL}/조득용_경력기술서.pdf`;
     link.download = "조득용_경력기술서.pdf";
     document.body.appendChild(link);
     link.click();
