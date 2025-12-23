@@ -20,7 +20,7 @@ const Header = () => {
               import.meta.env.BASE_URL
             }${profilePicture})`,
           }}
-          className="w-40 h-40 rounded-full bg-size-[85%] cursor-pointer bg-position-[11px_0px] border border-gray-300 shadow-sm hover:shadow-2xl hover:border-gray-400 dark:shadow-gray-800 shrink-0"
+          className="w-40 h-40 rounded-full bg-size-[85%] cursor-pointer bg-position-[11px_0px] border border-gray-100 shadow-sm hover:shadow-2xl dark:shadow-gray-800 shrink-0"
         />
       )}
 
