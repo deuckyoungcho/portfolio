@@ -5,16 +5,22 @@ const Header = () => {
   const { name, title, contact, profilePicture, yearsOfExperience } =
     resumeData;
 
+  const handleClick = () => {
+    const imageUrl = `${import.meta.env.BASE_URL}${profilePicture}`;
+    window.open(imageUrl, "_blank");
+  };
+
   return (
     <header className="flex flex-col md:flex-row-reverse items-center gap-8 mb-12">
       {profilePicture && (
         <div
+          onClick={handleClick}
           style={{
             backgroundImage: `url(${
               import.meta.env.BASE_URL
             }${profilePicture})`,
           }}
-          className="w-38 h-38 rounded-full bg-size-[85%] bg-position-[14px_0px] shadow-lg dark:shadow-gray-800 shrink-0"
+          className="w-40 h-40 rounded-full bg-size-[85%] cursor-pointer bg-position-[11px_0px] border border-gray-300 shadow-sm hover:shadow-2xl hover:border-gray-400 dark:shadow-gray-800 shrink-0"
         />
       )}
 
