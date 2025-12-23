@@ -54,10 +54,16 @@ const Experience = () => {
                       className="w-[100px] h-auto mb-1"
                     />
                   ) : null}
-                  <h3 className="text-xl font-bold dark:text-gray-100">{exp.company}</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">{exp.role}</p>
+                  <h3 className="text-xl font-bold dark:text-gray-100">
+                    {exp.company}
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    {exp.role}
+                  </p>
                 </div>
-                <span className="text-sm text-gray-500 dark:text-gray-400">{exp.period}</span>
+                <span className="text-sm text-gray-500 dark:text-gray-400">
+                  {exp.period}
+                </span>
               </div>
             </CardHeader>
             <CardContent className="space-y-2">
@@ -82,7 +88,7 @@ const Experience = () => {
                       </div>
                     </div>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-[625px] pt-10 dark:shadow-none">
+                  <DialogContent className="flex flex-col sm:max-w-[625px] pt-10 dark:shadow-none">
                     {proj.images && proj.images.length > 0 && (
                       <div className="relative mb-4">
                         <Carousel
@@ -116,7 +122,8 @@ const Experience = () => {
                               onClick={() => api?.scrollTo(i)}
                               className={cn(
                                 "mx-1 h-2 w-2 rounded-full bg-gray-400 dark:bg-gray-600",
-                                i + 1 === current && "bg-gray-800 dark:bg-gray-200"
+                                i + 1 === current &&
+                                  "bg-gray-800 dark:bg-gray-200"
                               )}
                             />
                           ))}
@@ -125,11 +132,11 @@ const Experience = () => {
                     )}
                     <DialogHeader>
                       <DialogTitle>{proj.title}</DialogTitle>
-                    </DialogHeader>
-                    <div className="grid gap-4 py-4">
                       <div className="text-sm text-muted-foreground">
                         <strong>기간:</strong> {proj.period}
                       </div>
+                    </DialogHeader>
+                    <div className="overflow-y-auto grid gap-4 py-2">
                       <ul className="text-sm text-foreground leading-relaxed list-inside list-disc">
                         {proj.description.map((desc, i) => (
                           <li key={i}>{desc}</li>

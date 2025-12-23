@@ -36,19 +36,18 @@ export const resumeData = {
       logo: "/logo/razenca.png",
       projects: [
         {
-          title: "메디슨 어드민 웹페이지 개발",
+          title: "메디슨 어드민 웹 어플리케이션 개발",
           period: "2025.01 - 2025.11",
           images: Array(6)
             .fill(null)
             .map((_, index) => screenshotBase + `/admin_0${index + 1}.png`),
           summary:
-            "React/TS, MUI, Zustand를 활용한 어드민 웹페이지 개발 및 CMS 시스템 구현",
+            "React/TS, MUI, Zustand를 활용한 어드민 웹 어플리케이션 개발 및 CMS 시스템 구현",
           description: [
-            "Zustand, React Hook Form, MUI를 활용한 어드민 프론트엔드 개발",
-            "백엔드 개발자와 API 인터페이스 설계",
-            "데이터 수집을 위한 Open API, Node.js 크롤링 로직 구현",
+            "요양기관 데이터 수집을 위한 Open API, Node.js 크롤링 로직 구현",
             "Tiptap Editor 커스터마이징을 통해 컨텐츠 관리 시스템(CMS) 개발",
             "관리자 역할 기반 접근 제어(RBAC) 시스템 적용",
+            "백엔드 개발자와 API 인터페이스 설계",
           ],
           stack: [
             "react",
@@ -63,19 +62,19 @@ export const resumeData = {
           ],
         },
         {
-          title: "메디슨 고객용 웹페이지 개발",
+          title: "메디슨 고객용 웹 어플리케이션 개발",
           period: "2025.01 - 2025.11",
           images: Array(5)
             .fill(null)
             .map((_, index) => screenshotBase + `/medison_0${index + 1}.png`),
           summary:
-            "React Router 프레임워크(Remix) 기반 고객용 웹사이트 프론트엔드 개발 및 디자인 시스템 구축",
+            "React Router 프레임워크(Remix) 기반 고객용 웹 어플리케이션 프론트엔드 개발 및 디자인 시스템 구축",
           description: [
-            "React Router 프레임워크와 TypeScript 환경에서 고객용 웹 애플리케이션 프론트엔드 개발",
-            "React Router의 SSR(Server Side Rendering) 기능을 활용하여 SEO 대응 기반 마련",
             "기획/디자이너와 협업하여 일관된 디자인 시스템(Tailwind CSS, Shadcn) 적용",
+            "React Router 프레임워크의 SSR 기능을 활용하여 SEO 대응",
             "컴포넌트 문서화를 위한 Storybook 구축",
             "공통 로직 공유를 위한 Verdaccio(사내저장소) 구축",
+            "채널톡, 전자서명모듈, 공인인증서 모듈 등 다양한 서드파티 모듈 연동",
           ],
           stack: [
             "react",
@@ -105,9 +104,10 @@ export const resumeData = {
             .map((_, index) => screenshotBase + `/superapp_0${index + 1}.png`),
           summary: "SuperOS(Native) 기능 제공 및 SuperApp 관리를 위한 SDK 개발",
           description: [
-            "플랫폼, 앱스토어, 앱 간의 통신을 위한 프로토콜 설계 리드",
+            "플랫폼, 앱스토어, 앱 간의 통신을 위한 프로토콜 설계 및 개발 리드",
             "SuperOS(Native) 기능 및 앱 관리 기능을 래핑하여 SDK로 제공",
             "Typedoc를 활용하여 API 문서 자동화",
+            "앱 라이프사이클 콜백 설계 및 구현",
             "웹소켓 통신을 위한 자체 프로토콜(SAP) 헬퍼 라이브러리 개발",
           ],
           stack: [
@@ -128,11 +128,12 @@ export const resumeData = {
             .fill(null)
             .map((_, index) => screenshotBase + `/sen_0${index + 1}.png`),
           summary:
-            "React 기반의 통합 플랫폼 솔루션 프론트엔드 개발 및 주요 고객사 시스템 맞춤 적용",
+            "React 기반의 슈퍼앱 플랫폼 프론트엔드 개발 및 주요 고객사 시스템 맞춤 적용",
           description: [
-            "React 기반 플랫폼 프론트엔드 아키텍처 설계 및 구현",
-            "WebSocket 통신 시스템 고도화",
+            "플랫폼 프론트엔드 베이스 아키텍처 설계 및 구현",
+            "웹, 웹뷰 기반의 모바일 웹, 데스크탑 앱 각 버전 구현",
             "고객사 요구에 맞춰 새로운 UI/UX 디자인 적용",
+            "SDK 적용, 통신 프로토콜(WebSocket) 전환 및 고도화",
           ],
           stack: [
             "react",
@@ -142,6 +143,7 @@ export const resumeData = {
             "websocket",
             "vite",
             "pnpm",
+            "monorepo",
           ],
         },
         {
@@ -152,7 +154,7 @@ export const resumeData = {
             .map((_, index) => screenshotBase + `/foodist_0${index + 1}.png`),
           summary: "채팅, 게시판, 정보 페이지 등을 포함한 B2C 서비스 개발",
           description: [
-            "플랫폼 파트 및 앱 연동 파트 프론트엔드 개발",
+            "플랫폼 및 앱 연동 파트 프론트엔드 개발",
             "기존 Core(App Manager) 경량화",
             "고객사 요구에 맞춰 새로운 UI/UX 디자인 적용",
           ],
@@ -174,11 +176,14 @@ export const resumeData = {
             .fill(null)
             .map((_, index) => screenshotBase + `/superapp_0${index + 1}.png`),
           summary:
-            "웹 앱을 동적으로 실행하고 관리하는 슈퍼앱 플랫폼 프론트엔드 개발",
+            "앱을 동적으로 실행하고 관리하는 슈퍼앱 플랫폼 프론트엔드 개발",
           description: [
-            "웹 앱을 동적으로 실행하고 관리하는  슈퍼앱 플랫폼 프론트엔드 구조 설계 및 구현",
+            "Iframe 기반의 앱 매니저, 렌더링 엔진 설계 및 구현",
+            "앱과 플랫폼 간의 통신 프로토콜 설계 및 구현",
             "레거시(Yarn, Webpack) 환경을 Pnpm, Vite 기반으로 마이그레이션하여 개발 효율을 개선",
             "Monorepo 도입하여 Core(앱 관리 로직), UI(React 컴포넌트), SDK(플랫폼-앱 통신) 모듈 분리",
+            "서울시교육청, 육군본부, 미래앤, 포스코, 농어촌공사, 푸디스트 등의 다수 프로젝트 참여",
+            "사업별 개발, 운영, 테스트 환경 통합 접속 포탈 개발을 통한 조직 내 업무 편의성 증대",
           ],
           stack: [
             "react",
@@ -204,6 +209,7 @@ export const resumeData = {
             "새로운 디자인에 맞춰 플랫폼의 UI/UX를 전면 리뉴얼, 반응형 웹 구현",
             "채팅, 노트, 미팅 등의 독립 모듈들을 플랫폼에 안정적으로 통합",
             "다국어(i18n) 및 테마(다크/라이트/시스템) 기능 구현",
+            "대화방, 친구 관련, 통합 알림센터 등 다수의 컴포넌트 개발",
           ],
           stack: [
             "react",
@@ -223,8 +229,9 @@ export const resumeData = {
           summary:
             "초기 협업 플랫폼의 프론트엔드 팀장, 핵심 모듈(톡/드라이브/노트) 설계",
           description: [
-            "플랫폼 프론트엔드 베이스 아키텍처 설계 및 구현",
+            "플랫폼 프론트엔드 아키텍처 설계 및 구현",
             "채팅, 드라이브, 노트 등 핵심 모듈의 안정적인 통합",
+            "Top.js, Jquery 기반의 레거시 프론트엔드를 React로 전환",
           ],
           stack: [
             "react",
@@ -236,6 +243,8 @@ export const resumeData = {
             "websocket",
             "yarn",
             "webpack",
+            "jquery",
+            "topjs",
           ],
         },
         {
@@ -246,8 +255,8 @@ export const resumeData = {
             .fill(null)
             .map((_, index) => screenshotBase + `/pronet_0${index + 1}.png`),
           description: [
-            "Cloud 네트워크 데이터를 기반으로 시각화 및 관리하는 웹 어플리케이션 개발",
-            "HTML, JavaScript(vanilla), CSS, TOP.js(JS 기반 웹 프레임워크)를 사용하여 필요기능 직접 구현.",
+            "Cloud 네트워크 데이터 시각화, 관리를 위한 웹 어플리케이션 개발",
+            "HTML, JavaScript(vanilla), CSS, TOP.js(JS 기반 웹 프레임워크), Jquery를 사용하여 필요기능 직접 구현",
           ],
           stack: [
             "html",
@@ -277,7 +286,7 @@ export const resumeData = {
           description: [
             "React, Node.js (Express)를 사용하여 재고 관리 시스템의 프론트엔드 및 서버 일부 개발",
             "Excel 파일 파싱, 데이터 렌더링 및 Excel 내보내기 기능 구현",
-            "Express 서버를 활용하여 REST API 구현",
+            "Express 서버를 활용하여 입고, 재고, 판매추이 등의 Rest API 구현",
           ],
           stack: ["react", "mui", "axios", "nodejs", "express", "mysql"],
         },
