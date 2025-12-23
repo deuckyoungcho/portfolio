@@ -2,6 +2,7 @@ import Section from "@/components/Section";
 import { Card, CardContent } from "@/components/ui/card";
 import { resumeData } from "@/data/resumeData";
 import { ArrowRight, ChevronRight, GraduationCap } from "lucide-react";
+import { Fragment } from "react/jsx-runtime";
 
 const Education = () => {
   const { education } = resumeData;
@@ -11,9 +12,8 @@ const Education = () => {
         <CardContent className="space-y-2">
           <div className="space-y-4">
             {education.map((edu, index) => (
-              <>
+              <Fragment key={index}>
                 <a
-                  key={index}
                   className="flex items-center justify-between group p-4 rounded-xl border border-transparent 
                   transition-all duration-300 ease-in-out cursor-pointer hover:border-gray-300 hover:bg-slate-100 hover:-translate-y-0.5 dark:hover:border-gray-700 dark:hover:bg-gray-800"
                   href={edu.url}
@@ -41,7 +41,7 @@ const Education = () => {
                 {index < education.length - 1 && (
                   <hr className="my-4 border-gray-200 dark:border-gray-700" />
                 )}
-              </>
+              </Fragment>
             ))}
           </div>
         </CardContent>
