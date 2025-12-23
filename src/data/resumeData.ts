@@ -81,6 +81,7 @@ export const resumeData = {
           ],
           stack: [
             "react",
+            "typescript",
             "reactRouter",
             "tailwind",
             "shadcn",
@@ -203,6 +204,7 @@ export const resumeData = {
             "vite",
             "yarn",
             "pnpm",
+            "webpack",
             "monorepo",
           ],
         },
@@ -237,7 +239,7 @@ export const resumeData = {
             .fill(null)
             .map((_, index) => screenshotBase + `/teespace_0${index + 1}.png`),
           summary:
-            "초기 협업 플랫폼의 프론트엔드 팀장, 핵심 모듈(톡/드라이브/노트) 설계",
+            "초기 협업 플랫폼의 팀장, 핵심 모듈(톡/드라이브/노트) 설계 및 플랫폼 프론트엔드 개발",
           description: [
             "플랫폼 프론트엔드 아키텍처 설계 및 구현",
             "채팅, 드라이브, 노트 등 핵심 모듈의 안정적인 통합",
@@ -299,9 +301,19 @@ export const resumeData = {
           description: [
             "React, Node.js (Express)를 사용하여 재고 관리 시스템의 프론트엔드 및 서버 일부 개발",
             "Excel 파일 파싱, 데이터 렌더링 및 Excel 내보내기 기능 구현",
-            "Express 서버를 활용하여 입고, 재고, 판매추이 등의 Rest API 구현",
+            "Express 서버를 활용하여 입고, 재고, 판매 추이 등의 Rest API 구현",
           ],
-          stack: ["react", "mui", "axios", "nodejs", "express", "mysql"],
+          stack: [
+            "react",
+            "typescript",
+            "mui",
+            "axios",
+            "nodejs",
+            "vite",
+            "pnpm",
+            "express",
+            "mysql",
+          ],
         },
       ],
     },
