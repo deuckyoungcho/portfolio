@@ -4,10 +4,74 @@ import { XIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-function Dialog({
-  ...props
-}: React.ComponentProps<typeof DialogPrimitive.Root>) {
-  return <DialogPrimitive.Root data-slot="dialog" {...props} />;
+function Dialog({ onOpenChange, defaultOpen, hash, ...props }: React.ComponentProps<typeof DialogPrimitive.Root> & { hash?: string }) {
+  const [open, setOpen] = React.useState<boolean>(!!defaultOpen);
+  const pushedRef = React.useRef(false);
+
+  const getHashString = React.useCallback(() => {
+    if (!hash) return "#dialog";
+    return hash.startsWith("#") ? hash : `#${hash}`;
+  }, [hash]);
+
+  React.useEffect(() => {
+    const expected = getHashString();
+    try {
+      if (window.location.hash === expected) {
+        const base = window.location.pathname + (window.location.search || "");
+        history.replaceState(null, "", base);
+        history.pushState({ dialog: true }, "", expected);
+        pushedRef.current = true;
+        setOpen(true);
+        onOpenChange?.(true);
+      }
+    } catch (e) {
+      // ignore
+    }
+  }, [getHashString, onOpenChange]);
+
+  React.useEffect(() => {
+    function onPop() {
+      const currentHash = window.location.hash || "";
+      const expected = getHashString();
+      if (open && currentHash !== expected) {
+        setOpen(false);
+        onOpenChange?.(false);
+        pushedRef.current = false;
+      }
+    }
+
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, [open, onOpenChange, getHashString]);
+
+  const handleOpenChange = (isOpen: boolean) => {
+    setOpen(isOpen);
+    onOpenChange?.(isOpen);
+
+    const hashString = getHashString();
+
+    if (isOpen) {
+      try {
+        history.pushState({ dialog: true }, "", hashString);
+        pushedRef.current = true;
+      } catch (e) {
+        // ignore
+      }
+    } else {
+      if (pushedRef.current) {
+        try {
+          history.back();
+        } catch (e) {
+          // ignore
+        }
+        pushedRef.current = false;
+      }
+    }
+  };
+
+  return (
+    <DialogPrimitive.Root data-slot="dialog" open={open} onOpenChange={handleOpenChange} {...props} />
+  );
 }
 
 function DialogTrigger({

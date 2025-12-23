@@ -30,12 +30,14 @@ export const resumeData = {
   },
   experience: [
     {
+      id: "exp-0",
       company: "라젠카에이아이",
       period: "2025.01 - 2025.11 (10개월)",
       role: "프론트엔드 개발 | 팀장",
       logo: "/logo/razenca.png",
       projects: [
         {
+          id: "proj-0-0",
           title: "메디슨 어드민 웹 어플리케이션 개발",
           period: "2025.01 - 2025.11",
           images: Array(6)
@@ -62,6 +64,7 @@ export const resumeData = {
           ],
         },
         {
+          id: "proj-0-1",
           title: "메디슨 고객용 웹 어플리케이션 개발",
           period: "2025.01 - 2025.11",
           images: Array(5)
@@ -91,12 +94,14 @@ export const resumeData = {
       ],
     },
     {
+      id: "exp-1",
       company: "티맥스에이앤씨",
       logo: "/logo/tmaxanc.png",
       period: "2016.04 - 2024.12 (8년 9개월)",
       role: "프론트엔드 개발 | 팀원",
       projects: [
         {
+          id: "proj-1-0",
           title: "슈퍼앱 SDK 개발",
           period: "2023.07 - 2024.11",
           images: Array(3)
@@ -121,6 +126,7 @@ export const resumeData = {
           ],
         },
         {
+          id: "proj-1-1",
           title:
             "대규모 공공기관 통합 협업 플랫폼 구축 (서울시교육청, 농어촌공사, 육군본부)",
           period: "2022.12 - 2024.07",
@@ -147,6 +153,7 @@ export const resumeData = {
           ],
         },
         {
+          id: "proj-1-2",
           title: "푸디스트 성공식당 커뮤니티 B2C 서비스 구축",
           period: "2023.05 - 2023.08",
           images: Array(4)
@@ -170,6 +177,7 @@ export const resumeData = {
         },
 
         {
+          id: "proj-1-3",
           title: "슈퍼앱 플랫폼 프론트엔드 개발",
           period: "2022.02 - 2024.12",
           images: Array(3)
@@ -199,6 +207,7 @@ export const resumeData = {
           ],
         },
         {
+          id: "proj-1-4",
           title: "WAPL 협업 플랫폼 프론트엔드 개발",
           period: "2021.03 - 2022.02",
           images: Array(3)
@@ -221,6 +230,7 @@ export const resumeData = {
           ],
         },
         {
+          id: "proj-1-5",
           title: "TeeSpace 협업 플랫폼 프론트엔드 개발 리딩",
           period: "2019.01 - 2021.03",
           images: Array(3)
@@ -248,6 +258,7 @@ export const resumeData = {
           ],
         },
         {
+          id: "proj-1-6",
           title: "ProNet 프론트엔드 개발",
           period: "2018.03 - 2019.01",
           summary: "네트워크 데이터 시각화 및 관리를 위한 웹 어플리케이션 개발",
@@ -271,11 +282,13 @@ export const resumeData = {
       ],
     },
     {
+      id: "exp-2",
       company: "사이드 프로젝트",
       period: "2023.10 - 2023.11 (2개월)",
       role: "프리랜서",
       projects: [
         {
+          id: "proj-2-0",
           title: "쿠팡 납품업체 재고 관리 시스템 개발",
           period: "2023.10 - 2023.11",
           images: Array(3)

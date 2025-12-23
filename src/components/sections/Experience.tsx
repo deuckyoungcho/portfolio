@@ -68,7 +68,7 @@ const Experience = () => {
             </CardHeader>
             <CardContent className="space-y-2">
               {exp.projects.map((proj, pIndex) => (
-                <Dialog key={pIndex}>
+                <Dialog key={pIndex} hash={proj.id}>
                   <DialogTrigger asChild>
                     <div
                       className="group p-4 rounded-lg border border-transparent flex items-center justify-between
