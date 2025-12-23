@@ -22,7 +22,7 @@ const ThemeToggle: React.FC = () => {
     <>
       <button
         onClick={download}
-        className="p-2 rounded-full text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors"
+        className="p-2 rounded-full text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors mr-1"
         aria-label="Toggle theme"
       >
         <Download size={20} />
